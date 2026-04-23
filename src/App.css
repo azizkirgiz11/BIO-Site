@@ -1,0 +1,168 @@
+/* App.css */
+.container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.background {
+  background-image: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  animation: twinkle 30s infinite linear;
+  position: fixed; /* Arka planın sabit kalması için */
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 40px;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffffaa;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: rgb(26, 133, 133);
+
+}
+
+section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+  box-shadow: 0 0 10px #00000099;
+}
+
+h2 {
+  border-bottom: 2px solid #ffffff33;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: rgb(56, 206, 206);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 6px 0;
+  font-size: 1.2em;
+}
+
+.info ul {
+  text-align: center;
+}
+
+.hobiContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.hobi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.hobi:hover {
+  transform: scale(1.1);
+}
+
+.hobi img {
+  width: 120px;
+  height: 120px;
+  border-radius: 14px;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.extra {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 15px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.spaceShip {
+  text-align: center;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.floppa {
+  width: 200px;
+  animation: spin 8s linear infinite, fly 10s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fly {
+  0% { transform: translateX(-20vw) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100vw) rotate(360deg); opacity: 0; }
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #00f, 0 0 10px #0ff; }
+  to { text-shadow: 0 0 20px #0ff, 0 0 40px #00f; }
+}
